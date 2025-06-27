@@ -20,9 +20,13 @@
 - update store with movie data
 - planning for maincontainer and secondary container
 - fetch data for trailer video
-update store with trailer video data
+- update store with trailer video data
 - embeded the youtube video make it autoplay and mute
 - tailwind css to make container look beautifull
+- build secondary container
+- fecth movieslist
+- custom hooks for topratedmovis & PopularMovies
+- make beautifull  interface
 
 # Features
  - Login & sign up

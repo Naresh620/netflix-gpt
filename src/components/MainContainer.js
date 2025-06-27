@@ -15,7 +15,7 @@ const movies=useSelector((store)=>store.movies?.nowPlaying);
   const {original_title,overview,id}=mainMovie;
 
   return (
-    <div className=''>
+    <div className='overflow-hidden'>
         <VideoTitle title={original_title} overview={overview}/>
         <VideoBackground movieId={id}/>
     </div>

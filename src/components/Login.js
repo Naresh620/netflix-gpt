@@ -93,7 +93,7 @@ const handleValidData = () => {
         src="https://assets.nflxext.com/ffe/siteui/vlv3/8200f588-2e93-4c95-8eab-ebba17821657/web/IN-en-20250616-TRIFECTA-perspective_9cbc87b2-d9bb-4fa8-9f8f-a4fe8fc72545_large.jpg"
         alt="banner"/>
         </div>
-        <form onSubmit={(e)=>e.preventDefault()} className='bg-black bg-opacity-80 absolute w-3/12 p-8 my-36 mx-auto left-0 right-0 rounded-lg h-fit'>
+        <form onSubmit={(e)=>e.preventDefault()} className='absolute w-11/12 sm:w-3/12 p-6 sm:p-8 mx-auto my-36 left-0 right-0 bg-black bg-opacity-80 rounded-lg h-fit'>
           <h1 className='text-white p-2 my-4 text-3xl font-bold'>{Login?"Sign In":"Sign Up"}</h1>
           {!Login && <input ref={name} className="text-white w-full p-2 my-4 rounded-sm bg-gray-700"  type="text" placeholder='Full Name'></input>}
           <input  ref={email} className="text-white w-full p-2 my-4 rounded-sm bg-gray-700" type='text' placeholder='Email'></input>
