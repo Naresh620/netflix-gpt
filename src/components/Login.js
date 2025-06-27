@@ -1,11 +1,12 @@
 import React, { useRef, useState } from 'react'
 import Header from './Header'
-import { checkValidatedata } from './utils/Validation';
+import { checkValidatedata } from '../utils/Validation';
 import { createUserWithEmailAndPassword,signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from './utils/firbase';
+import { auth } from '../utils/firbase';
 import { updateProfile } from "firebase/auth";
 import { useDispatch } from 'react-redux';
-import { addUser } from './utils/userSlice';
+import { addUser } from '../utils/userSlice';
+import { Avatar_Logo } from '../utils/Contents';
 
 
 const Login = () => {
@@ -41,7 +42,7 @@ const handleValidData = () => {
     const user = userCredential.user;
     // ...
     updateProfile(user, {
-  displayName: name.current.value, photoURL: "https://media.licdn.com/dms/image/v2/D4D03AQHK8wAAswSOfw/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1719488057749?e=1756339200&v=beta&t=80CvWinY884PUCuIr3yQB1yPfbUzmbESbxMakQWpzoA"
+  displayName: name.current.value, photoURL: Avatar_Logo
 }).then(() => {
   // Profile updated!
   // ...

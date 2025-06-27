@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { onAuthStateChanged, signOut } from "firebase/auth";
-import { auth } from './utils/firbase';
 import { useDispatch, useSelector } from 'react-redux';
+import { auth } from './utils/firbase';
+import { Logo } from './utils/Contents';
 import { addUser, removeUser } from './utils/userSlice';
 
 const Header = () => {
@@ -34,22 +35,22 @@ useEffect(() => {
       navigate("/");
     }
   });
-
+  //
+  return ()=>unsubscribe();
 }, []);
 
   return (
     <div>
-    <div className='absolute  p-8 bg-gradient-to-b from-black w-screen flex flex-wrap justify-between  '>
+    <div className='flex justify-between  px-8 py-4 bg-gradient-to-b from-black z-10 absolute w-full'>
         <img 
-        className='w-44  '
-        src="https://help.nflxext.com/helpcenter/OneTrust/oneTrust_production/consent/87b6a5c0-0104-4e96-a291-092c11350111/01938dc4-59b3-7bbc-b635-c4131030e85f/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png"
+        className='w-44'
+        src={Logo}
         alt="log"
         />
         {user && <div className='flex'>
         <img
         className='w-12 h-12 '
-   src="https://media.licdn.com/dms/image/v2/D4D03AQHK8wAAswSOfw/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1719488057749?e=1756339200&v=beta&t=80CvWinY884PUCuIr3yQB1yPfbUzmbESbxMakQWpzoA"
-        // src="https://occ-0-5452-3662.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABTZ2zlLdBVC05fsd2YQAR43J6vB1NAUBOOrxt7oaFATxMhtdzlNZ846H3D8TZzooe2-FT853YVYs8p001KVFYopWi4D4NXM.png?r=229"
+        src={user?.photoURL}
         alt="profile-logo"
         
         />

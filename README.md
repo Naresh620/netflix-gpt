@@ -12,6 +12,17 @@
 - create sign in/sign uo page
 - validation
 - Authentication 
+-  update the profile
+- BugFix: sign up user displayName and profile picture update
+- BugFix : if the user is not logged in Reirect/browse to Login page and vice-verse
+- unsubscribed to the onAuthstateChange callback
+- custom Hook for now playing movie
+- update store with movie data
+- planning for maincontainer and secondary container
+- fetch data for trailer video
+update store with trailer video data
+- embeded the youtube video make it autoplay and mute
+- tailwind css to make container look beautifull
 
 # Features
  - Login & sign up
