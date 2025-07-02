@@ -8,7 +8,7 @@ const movies=useSelector((store)=>store.movies?.nowPlaying);
 
   if(!movies) return;
 
-  const mainMovie=movies[2];
+  const mainMovie=movies[13];
   // console.log(mainMovie)
 
 

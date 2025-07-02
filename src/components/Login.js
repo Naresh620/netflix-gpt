@@ -6,7 +6,7 @@ import { auth } from '../utils/firbase';
 import { updateProfile } from "firebase/auth";
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
-import { Avatar_Logo } from '../utils/Contents';
+import { Avatar_Logo, BackgroundImg_URL } from '../utils/Contents';
 
 
 const Login = () => {
@@ -87,10 +87,10 @@ const handleValidData = () => {
   return (
     <div>
         <Header/>
-        <div className='absolute -z-10 w-full h-full'>
+        <div className='absolute -z-10 w-screen h-screen'>
              <img
-        className='object-cover'
-        src="https://assets.nflxext.com/ffe/siteui/vlv3/8200f588-2e93-4c95-8eab-ebba17821657/web/IN-en-20250616-TRIFECTA-perspective_9cbc87b2-d9bb-4fa8-9f8f-a4fe8fc72545_large.jpg"
+        className='object-cover w-screen h-screen'
+        src={BackgroundImg_URL}
         alt="banner"/>
         </div>
         <form onSubmit={(e)=>e.preventDefault()} className='absolute w-11/12 sm:w-3/12 p-6 sm:p-8 mx-auto my-36 left-0 right-0 bg-black bg-opacity-80 rounded-lg h-fit'>

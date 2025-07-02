@@ -27,6 +27,11 @@
 - fecth movieslist
 - custom hooks for topratedmovis & PopularMovies
 - make beautifull  interface
+- create GPTsearch button over header
+- build GPTSearch page
+- build language toggle function
+- make GPTsearch bar 
+- configure supported language function
 
 # Features
  - Login & sign up
