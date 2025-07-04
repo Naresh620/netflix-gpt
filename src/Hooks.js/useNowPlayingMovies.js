@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { API_options } from '../utils/Contents';
 import { addNowPlayingMovies } from '../utils/movieSlice';
 
 
 const useNowPlayingMovies = () => {
+
+  const useNowplayingmovie=useSelector(store=>store.movies.nowPlaying)
 
     const dispatch=useDispatch();
     
@@ -14,13 +16,12 @@ const useNowPlayingMovies = () => {
 
     const json=await data.json()
 
-    console.log(json)
 
     dispatch(addNowPlayingMovies(json.results))
 
   };
 useEffect(()=>{
-  fetchTMDBdata();
+ fetchTMDBdata();
 },[]);
 };
 

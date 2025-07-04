@@ -73,7 +73,7 @@ useEffect(() => {
           
           <button className=' px-5 py-2 text-white bg-red-600 hover:bg-red-700 rounded-lg transition-colors duration-200 shadow-md'
           onClick={handleGptSearchViews}
-          >GPT Search</button>
+          >{!ShowGptSearch?"GPT Search":"HomePage"}</button>
         <img
         className='w-12 h-12 '
         src={user?.photoURL}
